@@ -25,15 +25,6 @@ package org.adligo.i_collections.shared;
  */
 public interface I_NumberedIndexMutant<T extends I_Numbered> extends I_NumberedIndex<T> {
 
-  /**
-   * Add a new item to the end of the index, the index
-   * will assign a slot / index number
-   * @param t
-   * @return
-   * @Throws IllegalStateExeption if the element at index of T 
-   *   already exists.
-   */
-  public void add(T t);
   
   /**
    * 

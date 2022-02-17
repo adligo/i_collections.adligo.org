@@ -30,11 +30,11 @@ public interface I_IndexNodeMutant<T> extends I_IndexNode<T> {
    * @param t
    * @return true if it's overwriting a value
    */
-  public boolean put(T t);
+  public boolean put(int idx, T t);
   
   /**
    * Set the value over writing what's there
    * @param t
    */
-  public void set(T t);
+  public void set(int idx, T t);
 }

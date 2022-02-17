@@ -1,5 +1,6 @@
 package org.adligo.i_collections.shared;
 
+import java.util.Optional;
 import java.util.stream.Stream;
 
 /**
@@ -28,6 +29,13 @@ import java.util.stream.Stream;
  */
 
 public interface I_Index<T> extends I_Size {
+
+  /**
+   * get the value at the index idx
+   * @param idx
+   * @return
+   */
+  public Optional<T> find(int idx);
   
   /**
    * get the value at the index idx
