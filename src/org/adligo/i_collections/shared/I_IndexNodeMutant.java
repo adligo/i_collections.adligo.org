@@ -36,5 +36,5 @@ public interface I_IndexNodeMutant<T> extends I_IndexNode<T> {
    * Set the value over writing what's there
    * @param t
    */
-  public void set(int idx, T t);
+  public I_IndexNodeMutant<T> set(int idx, T t);
 }
