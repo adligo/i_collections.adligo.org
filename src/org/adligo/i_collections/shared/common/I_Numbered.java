@@ -1,4 +1,4 @@
-package org.adligo.i_collections.shared;
+package org.adligo.i_collections.shared.common;
 
 /**
  * A numberd object, which MAY be used in an Index.

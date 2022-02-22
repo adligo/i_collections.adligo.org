@@ -1,10 +1,9 @@
-package org.adligo.i_collections.shared;
+package org.adligo.i_collections.shared.indices;
 
-import java.math.BigInteger;
-
+import org.adligo.i_collections.shared.common.I_Numbered;
 
 /**
- * A indexable item that MAY be bigger than {@link Integer#MAX_VALUE}
+ * A extension of I_Index which has the I_Numberd as the super type.
  * 
  * @author scott
  *
@@ -26,8 +25,6 @@ import java.math.BigInteger;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_BigNumbered extends I_Numbered {
-  public BigInteger getNunber();
-  
-  public boolean isBig();
+public interface I_NumberedIndex<T extends I_Numbered> extends I_Index<T> {
+
 }

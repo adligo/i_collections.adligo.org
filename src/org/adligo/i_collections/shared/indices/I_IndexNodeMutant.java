@@ -1,9 +1,7 @@
-package org.adligo.i_collections.shared;
-
-import java.util.Optional;
+package org.adligo.i_collections.shared.indices;
 
 /**
- * A node of a index.
+ * A mutable version if {@link I_IndexNode}
  * 
  * @author scott
  *
@@ -25,19 +23,18 @@ import java.util.Optional;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_IndexNode<T> {
+public interface I_IndexNodeMutant<T> extends I_IndexNode<T> {
 
   /**
-   * return the {@link Optional) with the value or {@link Optional#empty())
-   * @param idx
-   * @return
+   * Set the value over writing what's there
+   * @param t
+   * @return true if it's overwriting a value
    */
-  public Optional<T> find(int idx);
+  public boolean put(int idx, T t);
   
   /**
-   * Return the value or null
-   * @param idx
-   * @return
+   * Set the value over writing what's there
+   * @param t
    */
-  public T get(int idx);
+  public I_IndexNodeMutant<T> set(int idx, T t);
 }

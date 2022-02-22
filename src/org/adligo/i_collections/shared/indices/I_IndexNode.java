@@ -1,7 +1,9 @@
-package org.adligo.i_collections.shared;
+package org.adligo.i_collections.shared.indices;
+
+import java.util.Optional;
 
 /**
- * A extension of I_Index which has the I_Numberd as the super type.
+ * A node of a index.
  * 
  * @author scott
  *
@@ -23,6 +25,19 @@ package org.adligo.i_collections.shared;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_NumberedIndex<T extends I_Numbered> extends I_Index<T> {
+public interface I_IndexNode<T> {
 
+  /**
+   * return the {@link Optional) with the value or {@link Optional#empty())
+   * @param idx
+   * @return
+   */
+  public Optional<T> find(int idx);
+  
+  /**
+   * Return the value or null
+   * @param idx
+   * @return
+   */
+  public T get(int idx);
 }

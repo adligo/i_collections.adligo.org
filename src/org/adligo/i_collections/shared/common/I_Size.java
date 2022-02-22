@@ -1,7 +1,8 @@
-package org.adligo.i_collections.shared;
+package org.adligo.i_collections.shared.common;
 
 /**
- * A mutable version if {@link I_IndexNode}
+ * This interfaces represents size of something, i.e. 
+ * the number of bytes inside a I_Bytes object. <br/>
  * 
  * @author scott
  *
@@ -23,18 +24,10 @@ package org.adligo.i_collections.shared;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_IndexNodeMutant<T> extends I_IndexNode<T> {
-
+public interface I_Size {
   /**
-   * Set the value over writing what's there
-   * @param t
-   * @return true if it's overwriting a value
+   * 
+   * @return the size of the collection (i.e. number of bytes)
    */
-  public boolean put(int idx, T t);
-  
-  /**
-   * Set the value over writing what's there
-   * @param t
-   */
-  public I_IndexNodeMutant<T> set(int idx, T t);
+  public int size();
 }

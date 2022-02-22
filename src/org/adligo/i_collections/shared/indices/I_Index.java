@@ -1,7 +1,9 @@
-package org.adligo.i_collections.shared;
+package org.adligo.i_collections.shared.indices;
 
 import java.util.Optional;
 import java.util.stream.Stream;
+
+import org.adligo.i_collections.shared.common.I_Size;
 
 /**
  * A index is a type of collection where things are indexed by an 

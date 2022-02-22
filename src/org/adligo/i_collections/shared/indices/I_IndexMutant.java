@@ -1,4 +1,4 @@
-package org.adligo.i_collections.shared;
+package org.adligo.i_collections.shared.indices;
 
 /**
  * A mutable version if {@link I_Index}

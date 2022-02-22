@@ -1,7 +1,10 @@
-package org.adligo.i_collections.shared;
+package org.adligo.i_collections.shared.common;
+
+import java.math.BigInteger;
 
 /**
- * A mutable version if {@link I_NumberedIndex}
+ * This interfaces represents size of something, i.e. 
+ * the number of bytes inside a I_Bytes object. <br/>
  * 
  * @author scott
  *
@@ -23,14 +26,17 @@ package org.adligo.i_collections.shared;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_NumberedIndexMutant<T extends I_Numbered> extends I_NumberedIndex<T> {
-
+public interface I_BigSize extends I_Size {
   
   /**
-   * 
-   * @param idx
-   * @param t
-   * @return true if this replaced a existing value
+   * return true if this is bigger than {@link Integer#MAX_VALUE)
+   * @return
    */
-  public boolean set(T t);
+  boolean isBig();
+ 
+  /**
+   * 
+   * @return the size of the collection (i.e. number of bytes)
+   */
+  public BigInteger getSize();
 }

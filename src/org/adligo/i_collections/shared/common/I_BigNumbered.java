@@ -1,8 +1,10 @@
-package org.adligo.i_collections.shared;
+package org.adligo.i_collections.shared.common;
+
+import java.math.BigInteger;
+
 
 /**
- * This interfaces represents size of something, i.e. 
- * the number of bytes inside a I_Bytes object. <br/>
+ * A indexable item that MAY be bigger than {@link Integer#MAX_VALUE}
  * 
  * @author scott
  *
@@ -24,10 +26,8 @@ package org.adligo.i_collections.shared;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_Size {
-  /**
-   * 
-   * @return the size of the collection (i.e. number of bytes)
-   */
-  public int size();
+public interface I_BigNumbered extends I_Numbered {
+  public BigInteger getNunber();
+  
+  public boolean isBig();
 }
