@@ -1,8 +1,9 @@
-package org.adligo.i_collections.shared.common;
+package org.adligo.i_collections.shared.streams;
+
+import java.util.stream.Stream;
 
 /**
- * This interfaces represents size of something, i.e. 
- * the number of non null elements in a array.
+ * A stream-able collection.
  * 
  * @author scott
  *
@@ -24,10 +25,22 @@ package org.adligo.i_collections.shared.common;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_Size {
+
+public interface I_Streamable<T> {
+
   /**
-   * 
-   * @return the size of the collection (i.e. number of elements)
+   * Create a stream of everything in this
+   * collection.  
+   * @return
    */
-  public int size();
+  public Stream<T> stream();
+  
+  
+  /**
+   * Provides the ability to combine streams from
+   * multiple collections into a single stream.
+   * @return stream of Optional that returns everything 
+   * in this collection.
+   */
+  public I_SizedSupplier<T> supply();
 }

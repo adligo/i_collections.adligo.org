@@ -1,8 +1,9 @@
 package org.adligo.i_collections.shared.common;
 
 /**
- * This interfaces represents size of something, i.e. 
- * the number of non null elements in a array.
+ * This interfaces represents capacity of something, i.e. 
+ * the number of total slots in an array regardless of
+ * the presence of non null elements. <br/>
  * 
  * @author scott
  *
@@ -24,10 +25,10 @@ package org.adligo.i_collections.shared.common;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_Size {
+public interface I_Capacity {
   /**
    * 
-   * @return the size of the collection (i.e. number of elements)
+   * @return the capacity of the collection (i.e. number of total slots).
    */
-  public int size();
+  public int capacity();
 }
