@@ -1,7 +1,11 @@
-package org.adligo.i_collections.shared.common;
+package org.adligo.i_collections.shared.chunks;
+
+import org.adligo.i_collections.shared.common.I_Crud;
+
 
 /**
- * A numbered object, which MAY be used in an Index.
+ * A new chunk state, since some chunks are immutable
+ * this can represent the chunk that is replacing the exiting chunk.
  * 
  * @author scott
  *
@@ -23,10 +27,6 @@ package org.adligo.i_collections.shared.common;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_Numbered {
-  /**
-   * Get the numbered / index of this object
-   * @return a positive integer
-   */
-  public int getNbr();
+public interface I_NewChunkState<T> extends I_Chunk<T>, I_Crud {
+
 }

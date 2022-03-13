@@ -2,6 +2,7 @@ package org.adligo.i_collections.shared.streams;
 
 import java.util.stream.Stream;
 
+import org.adligo.i_collections.shared.common.I_Capacity;
 import org.adligo.i_collections.shared.common.I_Size;
 
 
@@ -29,7 +30,7 @@ import org.adligo.i_collections.shared.common.I_Size;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_StreamableRange<T> extends I_Size, I_Streamable<T> {
+public interface I_StreamableRange<T> extends I_Capacity, I_Size, I_Streamable<T> {
 
   /**
    * This provides a more optimal way to stream
