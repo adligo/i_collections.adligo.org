@@ -41,7 +41,7 @@ public interface I_Chunk<T> extends I_StreamableRange<T> {
    * @return immutable implementations will return a new I_Chunk<br/>
    *   mutable implementations MAY return this<br/>
    */
-  I_NewChunkState<T> overlay(int idx, T t);
+  I_NewChunk<T> overlay(int idx, T t);
   
   /**
    * This method creates a new I_Chunk either removing the 
@@ -51,5 +51,5 @@ public interface I_Chunk<T> extends I_StreamableRange<T> {
    * @return immutable implementations will return a new I_Chunk<br/>
    *   mutable implementations MAY return this<br/>
    */
-  I_NewChunkState<T> reduce(int idx);
+  I_NewChunk<T> reduce(int idx);
 }

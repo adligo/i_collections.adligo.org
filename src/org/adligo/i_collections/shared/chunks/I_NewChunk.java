@@ -1,13 +1,8 @@
-package org.adligo.i_collections.shared.streams;
-
-import org.adligo.i_collections.shared.common.I_Capacity;
-import org.adligo.i_collections.shared.common.I_Size;
+package org.adligo.i_collections.shared.chunks;
 
 /**
- * A sort of a external iterator for a I_Streamable
- * that is backed by an simple array or something similar, 
- * which allows for aggregation
- * of I_Streamables into a single stream.
+ * A new chunk state, since some chunks are immutable
+ * this can represent the chunk that is replacing the exiting chunk.
  * 
  * @author scott
  *
@@ -29,12 +24,6 @@ import org.adligo.i_collections.shared.common.I_Size;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_SizedSupplier<T> extends I_Capacity, I_Size {
+public interface I_NewChunk<T> extends I_Chunk<T>, I_ChunkOrigin {
 
-  /**
-   * get the element at the index
-   * @param idx
-   * @return an item T or null
-   */
-  public T get(int idx);
 }

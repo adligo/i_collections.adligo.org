@@ -1,13 +1,9 @@
-package org.adligo.i_collections.shared.streams;
+package org.adligo.i_collections.shared.common;
 
-import org.adligo.i_collections.shared.common.I_Capacity;
-import org.adligo.i_collections.shared.common.I_Size;
+import java.math.BigInteger;
 
 /**
- * A sort of a external iterator for a I_Streamable
- * that is backed by an simple array or something similar, 
- * which allows for aggregation
- * of I_Streamables into a single stream.
+ * A Common Interface for UInt and BigUInt. <br/>
  * 
  * @author scott
  *
@@ -29,12 +25,18 @@ import org.adligo.i_collections.shared.common.I_Size;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_SizedSupplier<T> extends I_Capacity, I_Size {
-
+public interface I_UInt extends I_Big {
   /**
-   * get the element at the index
-   * @param idx
-   * @return an item T or null
+   * if this is big, use this method to obtain the
+   * BigInteger value
+   * @return
    */
-  public T get(int idx);
+  BigInteger toBigInt();
+  
+  /**
+   * if this is NOT big, use this method to obtain the
+   * Integer value
+   * @return
+   */
+  int toInt();
 }

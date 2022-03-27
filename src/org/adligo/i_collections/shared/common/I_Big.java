@@ -1,11 +1,8 @@
-package org.adligo.i_collections.shared.chunks;
-
-import org.adligo.i_collections.shared.common.I_Crud;
-
+package org.adligo.i_collections.shared.common;
 
 /**
- * A new chunk state, since some chunks are immutable
- * this can represent the chunk that is replacing the exiting chunk.
+ * This interface helps identify Big collections
+ * that can store up to (u)BigInteger instead of just (u)int. <br/>
  * 
  * @author scott
  *
@@ -27,6 +24,11 @@ import org.adligo.i_collections.shared.common.I_Crud;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_NewChunkState<T> extends I_Chunk<T>, I_Crud {
-
+public interface I_Big {
+  /**
+   * When false the collection it's a regular collection,
+   * when true it's a big collection.
+   * @return
+   */
+  boolean isBig();
 }

@@ -1,13 +1,8 @@
-package org.adligo.i_collections.shared.streams;
-
-import org.adligo.i_collections.shared.common.I_Capacity;
-import org.adligo.i_collections.shared.common.I_Size;
+package org.adligo.i_collections.shared.common;
 
 /**
- * A sort of a external iterator for a I_Streamable
- * that is backed by an simple array or something similar, 
- * which allows for aggregation
- * of I_Streamables into a single stream.
+ * This interfaces represents size of something, i.e. 
+ * the number of non null elements in a array.
  * 
  * @author scott
  *
@@ -29,12 +24,11 @@ import org.adligo.i_collections.shared.common.I_Size;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_SizedSupplier<T> extends I_Capacity, I_Size {
-
+public interface I_BigSize extends I_Big {
+  
   /**
-   * get the element at the index
-   * @param idx
-   * @return an item T or null
+   * 
+   * @return the size of the collection (i.e. number of elements)
    */
-  public T get(int idx);
+  public BigUInt getSize();
 }

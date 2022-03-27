@@ -25,10 +25,11 @@ package org.adligo.i_collections.shared.common;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_Capacity {
+public interface I_Capacity extends I_Big {
   /**
    * 
    * @return the capacity of the collection (i.e. number of total slots).
    */
   public int capacity();
+
 }

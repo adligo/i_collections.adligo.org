@@ -1,13 +1,8 @@
-package org.adligo.i_collections.shared.streams;
-
-import org.adligo.i_collections.shared.common.I_Capacity;
-import org.adligo.i_collections.shared.common.I_Size;
+package org.adligo.i_collections.shared.chunks;
 
 /**
- * A sort of a external iterator for a I_Streamable
- * that is backed by an simple array or something similar, 
- * which allows for aggregation
- * of I_Streamables into a single stream.
+ * This interface contains the origins of the new chunks, or in other words
+ * how the new chunk 
  * 
  * @author scott
  *
@@ -29,12 +24,20 @@ import org.adligo.i_collections.shared.common.I_Size;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_SizedSupplier<T> extends I_Capacity, I_Size {
-
+public interface I_ChunkOrigin {
+  public static final byte NEW = 0;
+  public static final byte OVERLAY = 1;
+  public static final byte REDUCE = 2;
+  
   /**
-   * get the element at the index
-   * @param idx
-   * @return an item T or null
+   * returns the origin of a new chunk
+   * @return
    */
-  public T get(int idx);
+  public I_ChunkOrigin getOrigin();
+  /**
+   * Obtains the id, one of the constants in this interface
+   * NEW, OVERLAY or REDUCE
+   * @return
+   */
+  public byte getOriginId();
 }

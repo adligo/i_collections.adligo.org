@@ -24,7 +24,8 @@ package org.adligo.i_collections.shared.common;
  * limitations under the License.
  * </code><pre>
  */
-public interface I_Size {
+public interface I_Size extends I_Big {
+  
   /**
    * 
    * @return the size of the collection (i.e. number of elements)
